@@ -2,7 +2,7 @@
 /*
 Settings-Datei vom SimpelCMS
 """"""""""""""""""""""""""""
-Version: SimpelCMS v08/15.0015git (Stand 28.02.2010)
+Version: SimpelCMS v08/15.0015 (Stand 28.02.2010)
 */
 
 //*************************************************************
