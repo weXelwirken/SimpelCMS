@@ -1,0 +1,23 @@
+RewriteEngine on
+Options FollowSymLinks
+RewriteBase /scms
+
+RewriteRule Startseite.html index.php?id=1&amp;ord=0
+RewriteRule SimpelCMS_Sinn_&_Zweck_Zielgruppe.html index.php?id=28&amp;ord=13
+RewriteRule SimpelCMS_Versions-Historie_Versions-Historie.html index.php?id=15&amp;ord=16
+RewriteRule weXelwirken_weXelwirken.html index.php?id=13&amp;ord=23
+RewriteRule weXelwirken_Kontakt.html index.php?id=14&amp;ord=23
+RewriteRule SimpelCMS_SimpelCMS.html index.php?id=25&amp;ord=8
+RewriteRule Hilfe_FAQ.html index.php?id=48&amp;ord=12
+RewriteRule SimpelCMS_Anforderungen.html index.php?id=37&amp;ord=8
+RewriteRule Intern_Geheimnisse.html index.php?id=42&amp;ord=31
+RewriteRule Intern_Externes_Geheimnis.html index.php?id=43&amp;ord=31
+RewriteRule Unangemeldet_Unangemeldet.html index.php?id=44&amp;ord=32
+RewriteRule SimpelCMS_Eigenschaften.html index.php?id=51&amp;ord=8
+RewriteRule Home.html index.php?id=49&amp;ord=0
+RewriteRule Suche.html index.php?id=52&amp;ord=0
+RewriteRule TestSearch_Pagetest.html index.php?id=61&amp;ord=43
+RewriteRule Search.html index.php?id=62&amp;ord=0
+RewriteRule SCMS_Module_SCMS_Module.html index.php?id=65&amp;ord=46
+RewriteRule Sitemap.html index.php?id=74&amp;ord=0
+RewriteRule Contact.html index.php?id=66&amp;ord=0

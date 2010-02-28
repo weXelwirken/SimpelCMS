@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+	
+	<title>Slimbox V1.65 | Test Seite</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-15">
+	<link rel="stylesheet" href="css/slimbox.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="js/mootools.js"></script>
+	<script type="text/javascript" src="js/slimbox.js"></script>
+
+	<style type="text/css">
+		body{ color: #333; font: 13px 'Lucida Grande', Verdana, sans-serif;	}
+	</style>
+
+</head>
+<body>
+
+
+<h1><a href="http://www.phpblogger.net/2007/11/29/slimbox-14-deutsch/">Slimbox <em>v1.65</em> (deutsch)</a></h1>
+<p><a href="http://www.digitalia.be/software/slimbox">Original von Christophe Beyls</a>, bitte wirf auch einen Blick in die entsprechende <a href="http://code.google.com/p/slimbox/">Google Group</a></p>
+<p><a href="http://www.phpblogger.net/2007/11/29/slimbox-14-deutsch/">Deutsche &Uuml;bersetzung von Tim B&ouml;ttiger</a></p>
+
+<p>Die Datei, die Du gedownloaded hast, ist nicht die Orginal-Datei von Christophe. Es ist die deutsche &Uuml;bersetzung.</p>
+<p>Angepasst wurden hierf&uuml;r die Grafiken f&uuml;r die Buttons &quot;vor&quot;, &quot;zur&uuml;ck&quot; und &quot;schliessen&quot; sowie die index.html, die slimbox.js und die slimbox.css.</p>
+<h2>Beispiel</h2>
+
+<p><strong>Ein einzelnes Bild:</strong><br /><a href="images/image-1.jpg" rel="lightbox"><img src="images/thumb-1.jpg" width="100" height="40" alt="" /></a></p>
+
+<p><strong>Eine Galerie:</strong> (Mit Title-Tags)<br /><a href="images/image-2.jpg" rel="lightbox[galerie]" title="Ein schickes Bild"><img src="images/thumb-1.jpg" width="100" height="40" alt="" /></a>
+<a href="images/image-3.jpg" rel="lightbox[galerie]" title="Super Ansicht!"><img src="images/thumb-1.jpg" width="100" height="40" alt="" /></a></p>
+
+<h2>Und so gehts:</h2>
+<h3>Schritt 1 - Einbindung</h3>
+<ol>
+<li>Slimbox v1.65 basiert auf dem Mootools Framework. Du musst alle zwei Javascript-Dateien im Header-Bereich einbinden.
+<pre><code>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/mootools.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/slimbox.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+</li>
+<li>Binde die Slimbox CSS Datei ein (oder erg&auml;nze Dein eigenes Stylesheet mit den Slimbox-Styles).
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/slimbox.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+</code></pre>
+</li>
+<li>&Uuml;berpr&uuml;fe das CSS und stelle sicher, dass die eingebundenen Dateien <code>prevlabel.gif</code> und <code>nextlabel.gif</code> im richtigen Ordner liegen. Schau ausserdem noch nach den Pfaden der Dateien <code>loading.gif</code> und <code>closelabel.gif</code> die in der <code>slimbox.css</code> Datei verlinkt sind.</li>
+</ol>
+<h3>Schritt 2 - Aktivierung</h3>
+<ol>
+<li>F&uuml;ge ein <code>rel="lightbox"</code> Attribut zu jedem Link-Tag hinzu, um Slimbox zu aktivieren. Zum Beispiel:
+<pre><code>&lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lightbox&quot; title=&quot;Mein Titel&quot;&gt;Bild #1&lt;/a&gt;
+</code></pre>
+<em>Optional: </em>kannst Du das <code>title</code> Attribut benutzen, um einen Titel zu hinterlegen.		</li>
+<li>Wenn Du eine Galerie aus verschiedenen zusammengeh&ouml;rigen Bildern hast, machs genauso wie im 1. Schritt f&uuml;ge aber noch einen Galerie-Namen in eckigen Klammern zum rel-Attribut hinzu. Zum Beispiel: 
+<pre><code>&lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lightbox[roadtrip]&quot;&gt;Bild #1&lt;/a&gt;
+&lt;a href=&quot;images/image-2.jpg&quot; rel=&quot;lightbox[roadtrip]&quot;&gt;Bild #2&lt;/a&gt;
+&lt;a href=&quot;images/image-3.jpg&quot; rel=&quot;lightbox[roadtrip]&quot;&gt;Bild #3&lt;/a&gt;
+</code></pre>
+Die Anzahl der Bilder pro Galerie ist nicht begrenzt. Los gehts!</li>
+</ol>	
+
+
+</body>
+</html>
