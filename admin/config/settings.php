@@ -23,8 +23,8 @@ $ScmsVerweise =         true;                       // Verweise
 //*************************************************************
 // Variablen aufladen
 
-$ServerRoot =           $_SERVER['DOCUMENT_ROOT'].$ServerRootPath;      // Server Wurzel
-$HttpRoot =             $SiteUrl.$ServerRootPath;                       // HTTP Wurzel
+$ServerRoot =           $_SERVER['DOCUMENT_ROOT'].$RelativePath;      // Server Wurzel
+$HttpRoot =             $SiteUrl.$RelativePath;                       // HTTP Wurzel
 $ImgPfad =              $HttpRoot."/img";                               // IMG-Pfad
 $ImgPfadAdmin =         $HttpRoot."/admin/img";                         // IMG-Admin-Pfad
 $OneGif =               $ImgPfad."/one.gif";                            // OneGif-Pfad
