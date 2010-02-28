@@ -5,16 +5,41 @@ Settings-Datei vom SimpelCMS
 Version: SimpelCMS v08/15.0015git (Stand 28.02.2010)
 */
 
-// echo "<!-- Settings einbinden -->\n";
+// Einstellungen
+$RelativePath =         "/scms";                    // Pfad relativ zum DocumentRoot bzw. HttpRoot
+$SiteUrl =              "http://localhost:8888";    // URL der Website
+$MainCss =              "scms.css";                 // Dateiname der Haupt-CSS-Datei
+$ScmsTpl =              "scms.tpl";                 // Name des verwendeten Smarty-Templates
 
-// Server Wurzel
-$ServerRootPath = "/scms";
-$ServerRoot = $_SERVER['DOCUMENT_ROOT'].$ServerRootPath;
-// echo "<!-- " . $ServerRoot . " -->\n";
+// Features
+$ScmsAuth =             true;                       // Nutzer-Authentifizierung im Frontend
+$ScmsLang =             true;                       // Multilingualität (weitere Einstellungen s.u.)
+$ScmsVerweise =         true;                       // Verweise
 
-// HTTP Wurzel
-$HttpRoot = "http://localhost:8888/scms";
-// echo "<!-- " . $HttpRoot . " -->\n";
+
+//*************************************************************
+// Variablen aufladen
+
+$ServerRoot =           $_SERVER['DOCUMENT_ROOT'].$ServerRootPath;      // Server Wurzel
+$HttpRoot =             $SiteUrl.$ServerRootPath;                       // HTTP Wurzel
+$ImgPfad =              $HttpRoot."/img";                               // IMG-Pfad
+$ImgPfadAdmin =         $HttpRoot."/admin/img";                         // IMG-Admin-Pfad
+$OneGif =               $ImgPfad."/one.gif";                            // OneGif-Pfad
+$PdfPfad =              $HttpRoot . "/pdf";                             // PDF-Pfad
+$PmaPfad =              "http://confixx.wexelwirken.de/phpMyAdmin/";    // PMA-Pfad
+$CssPfad =              $HttpRoot."/".$MainCss;                         // CSS-Pfad
+$CssPfadJs =            "../scms.css";                                  // CSS-Pfad TinyMCE
+$CssPfadAdmin =         $HttpRoot . "/admin/admin.css";                 // CSS-Pfad Admin
+
+
+// JS-Pfad
+$JsPfad = $HttpRoot . "/scms.js";
+//echo "<!-- " . $JsPfad . " -->\n";
+
+// SlimboxSrc
+$SlimboxSrc = "/admin/jscripts/slimbox";
+//echo "<!-- " . $SlimboxSrc . " -->\n";
+
 
 // Klassen einbinden
 include($ServerRoot . "/admin/php/klassen/klassen.php");
@@ -40,51 +65,13 @@ include($ServerRoot . "/admin/config/userSettings.php");
 include($ServerRoot . "/admin/config/module.php");
 //echo "<!-- Module einbinden -->\n";
 
-// IMG-Pfad
-$ImgPfad = $HttpRoot . "/img";
-$ImgPfadAdmin = $HttpRoot . "/admin/img";
-$OneGif = $ImgPfad . "/one.gif";
-//echo "<!-- " . $ImgPfad . " -->\n";
 
-// PDF-Pfad
-$PdfPfad = $HttpRoot . "/pdf";
-
-// PMA-Pfad
-$PmaPfad = "http://confixx.wexelwirken.de/phpMyAdmin/";
-//echo "<!-- " . $PmaPfad . " -->\n";
-
-// CSS-Pfad
-$CssPfad = $HttpRoot . "/scms.css";
-$CssPfadJs = "../scms.css";
-$CssPfadAdmin = $HttpRoot . "/admin/admin.css";
-//echo "<!-- " . $CssPfad . " -->\n";
-
-// JS-Pfad
-$JsPfad = $HttpRoot . "/scms.js";
-//echo "<!-- " . $JsPfad . " -->\n";"scms.tpl"
-
-// ScmsTpl
-$ScmsTpl = "scms.tpl";
-//echo "<!-- " . $ScmsTpl . " -->\n";
-
-// ScmsAuth
-$ScmsAuth = true;
-//echo "<!-- " . $ScmsAuth . " -->\n";
 
 // ScmsLang
-$ScmsLang = true;
 $InterfaceLang = "DE";
 include($ServerRoot . "/admin/lang/".$InterfaceLang.".php");
 //echo "<!-- " . $ScmsLang . " -->\n";
 //echo "<!-- " . $InterfaceLang . " -->\n";
-
-// ScmsVerweise
-$ScmsVerweise = true;
-//echo "<!-- " . $ScmsVerweise . " -->\n";
-
-// SlimboxSrc
-$SlimboxSrc = "/admin/jscripts/slimbox";
-//echo "<!-- " . $SlimboxSrc . " -->\n";
 
 
 //*************************************************************
