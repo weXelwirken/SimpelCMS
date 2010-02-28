@@ -5,15 +5,18 @@ Settings-Datei vom SimpelCMS
 Version: SimpelCMS v08/15.0015git (Stand 28.02.2010)
 */
 
+//*************************************************************
+// Grundlegendes
+
 // Einstellungen
-$RelativePath =         "/scms";                    // Pfad relativ zum DocumentRoot bzw. HttpRoot
 $SiteUrl =              "http://localhost:8888";    // URL der Website
+$RelativePath =         "/scms";                    // Pfad relativ zum DocumentRoot bzw. HttpRoot
 $MainCss =              "scms.css";                 // Dateiname der Haupt-CSS-Datei
 $ScmsTpl =              "scms.tpl";                 // Name des verwendeten Smarty-Templates
 
 // Features
 $ScmsAuth =             true;                       // Nutzer-Authentifizierung im Frontend
-$ScmsLang =             true;                       // Multilingualität (weitere Einstellungen s.u.)
+$ScmsLang =             true;                       // Multilingualität
 $ScmsVerweise =         true;                       // Verweise
 
 
@@ -30,48 +33,22 @@ $PmaPfad =              "http://confixx.wexelwirken.de/phpMyAdmin/";    // PMA-P
 $CssPfad =              $HttpRoot."/".$MainCss;                         // CSS-Pfad
 $CssPfadJs =            "../scms.css";                                  // CSS-Pfad TinyMCE
 $CssPfadAdmin =         $HttpRoot . "/admin/admin.css";                 // CSS-Pfad Admin
+$JsPfad =               $HttpRoot . "/scms.js";                         // JS-Pfad
+$SlimboxSrc =           "/admin/jscripts/slimbox";                      // SlimboxSrc
+$InterfaceLang =        "DE";                                           // Standard-Sprache
 
 
-// JS-Pfad
-$JsPfad = $HttpRoot . "/scms.js";
-//echo "<!-- " . $JsPfad . " -->\n";
+//*************************************************************
+// Dateien einbinden
 
-// SlimboxSrc
-$SlimboxSrc = "/admin/jscripts/slimbox";
-//echo "<!-- " . $SlimboxSrc . " -->\n";
+include($ServerRoot . "/admin/php/klassen/klassen.php");                // Klassen einbinden
+include($ServerRoot . "/admin/php/funktionen/funktionen.php");          // Funktionen einbinden
+require($ServerRoot . "/admin/php/smarty/MySmarty.class.php");          // Smarty einbinden
+include($ServerRoot . "/admin/config/verbindungsdaten.php");            // Verbindungsdaten einbinden
+include($ServerRoot . "/admin/config/userSettings.php");                // User-Settings einbinden
+include($ServerRoot . "/admin/config/module.php");                      // Module einbinden
+include($ServerRoot . "/admin/lang/".$InterfaceLang.".php");            // InterfaceLang einbinden
 
-
-// Klassen einbinden
-include($ServerRoot . "/admin/php/klassen/klassen.php");
-//echo "<!-- Klassen einbinden -->\n";
-
-// Funktionen einbinden
-include($ServerRoot . "/admin/php/funktionen/funktionen.php");
-//echo "<!-- Funktionen einbinden -->\n";
-
-// Smarty einbinden
-require($ServerRoot . "/admin/php/smarty/MySmarty.class.php");
-// echo "<!-- Smarty einbinden -->\n";
-
-// Verbindungsdaten einbinden
-include($ServerRoot . "/admin/config/verbindungsdaten.php");
-//echo "<!-- Verbindungsdaten einbinden -->\n";
-
-// User-Settings einbinden
-include($ServerRoot . "/admin/config/userSettings.php");
-//echo "<!-- User-Settings einbinden -->\n";
-
-// Module einbinden
-include($ServerRoot . "/admin/config/module.php");
-//echo "<!-- Module einbinden -->\n";
-
-
-
-// ScmsLang
-$InterfaceLang = "DE";
-include($ServerRoot . "/admin/lang/".$InterfaceLang.".php");
-//echo "<!-- " . $ScmsLang . " -->\n";
-//echo "<!-- " . $InterfaceLang . " -->\n";
 
 
 //*************************************************************
