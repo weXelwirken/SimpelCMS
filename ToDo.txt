@@ -1,8 +1,3 @@
 TODO:
-X Scripte und Inhalte gleichzeitig zugänglich machen (wie bei GFK)
-X Naiv einrücken mit <div> und nicht mit &nbsp; (siehe SFM)
-X Einstellungen korrigieren (add/stripslashes)
-X a-Klassen in CSS korrigieren (zusammenfassen, ';' am Ende)
-X PasswordGenerator in Funktionen übernehmen (siehe SFM MedVerz)
-X Schon besetzte Positionen in OrdAdmin verbessern
+- GIT benutzen & verstehen
 
