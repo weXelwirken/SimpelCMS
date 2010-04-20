@@ -1,0 +1,278 @@
+body    {
+        background: #F5F5EF url('img/bg.gif') no-repeat center top;
+        margin:10px 10px 10px 10px;
+        }
+
+body, td, p, div	{
+		color: #666666;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica
+		}
+
+h1		{
+		color: #7799aa;
+		font-weight: normal;
+		font-size: 33px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 10px;
+		margin-bottom: 10px
+		}
+
+h2		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 25px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 5px;
+		margin-bottom: 5px
+		}
+
+h3		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 3px;
+		margin-bottom: 3px
+		}
+
+h4		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 16px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 2px;
+		margin-bottom: 2px
+		}
+
+h5		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 2px;
+		margin-bottom: 2px
+		}
+
+.text	{
+		color: #666666;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica
+		}
+		
+.textBlau	{
+		color: #0000FF;
+		}
+		
+.textGruen	{
+		color: #009900;
+		}
+		
+.textOrange	{
+		color: #FF9933;
+		}
+		
+.textRot	{
+		color: #cc0000;
+		}
+		
+.klein	{
+		font-size: 10px;
+		}
+
+.kleiner{
+		font-size: 9px;
+		}
+
+.groesser{
+		font-size: 16px;
+		}
+
+.kopfnav	{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 16px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		}
+
+.navtitel	{
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica
+		}
+
+.navtext	{
+		color: #7799aa;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica
+		}
+		
+a:link	{
+		color: #666666;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		text-decoration: underline;
+		outline:none;
+		}
+
+a:visited {
+		color: #666666;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		text-decoration: underline;
+		outline:none;
+		}
+
+a:hover	{
+		color: #7799aa;
+		font-weight: bold;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		text-decoration: none;
+		outline:none;
+		}
+
+legend	{
+        padding:0px 5px 0px 5px;
+		color:#7799aa;
+		font-weight:bold;
+		}
+
+fieldset	{
+		border-color: #7799aa;
+		border-style:solid;
+		border-width:1px;
+		-moz-border-radius-topleft:10px;
+        -moz-border-radius-topright:10px;
+		}
+		
+hr      {
+        width:100%;
+        color:#7799aa;
+        background-color:#7799aa;
+        height:1px;
+        margin-right:0;
+        border:0px dashed blue;
+        }
+		
+.userSettings    {
+        background-color:#ffffff;
+        padding:2px;
+        color:#000000;
+        font-weight:bold;
+		border-color: #7799aa;
+		border-style:solid;
+		border-width:1px;
+        }
+		
+textarea    {
+        background-color:#ffffff;
+        padding:2px;
+        color:#000000;
+		border-color: #7799aa;
+		border-style:solid;
+		border-width:1px;
+        }
+
+li      {
+        margin-left:15px;
+        }
+        
+.anzeigeBox {
+        background-color:#ffffff;
+        min-width:10px;
+        padding:2px;
+        border:1px solid #999999;
+        }
+        
+
+/* ######################################################################################################### */
+/* JS MenuBar ############################################################################################## */
+/* ######################################################################################################### */
+
+div.menuBar,
+div.menuBar a.menuButton,
+div.menu,
+div.menu a.menuItem {
+  font-family: Trebuchet MS, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  color: #7799aa;
+}
+
+div.menuBar {
+  /*background-color: #d0d0d0;
+  border: 2px solid;
+  border-color: #f0f0f0 #909090 #909090 #f0f0f0;*/
+  padding: 0px 0px 0px 0px;
+  text-align: right;
+  margin:0px 10px 10px 0px;
+}
+
+div.menuBar a.menuButton {
+  background-color: transparent;
+  /*border: 1px solid #d0d0d0;*/
+  color: #7799aa;
+  cursor: default;
+  left: 0px;
+  margin: 1px;
+  padding: 2px 6px 2px 6px;
+  position: relative;
+  text-decoration: underline;
+  top: 0px;
+  z-index: 100;
+}
+
+div.menuBar a.menuButton:hover {
+  background-color: transparent;
+  border-color: #f0f0f0 #909090 #909090 #f0f0f0;
+  color: #7799aa;
+  text-decoration: none;
+}
+
+div.menuBar a.menuButtonActive,
+div.menuBar a.menuButtonActive:hover {
+  /*background-color: #ffffff;
+  border-color: #909090 #f0f0f0 #f0f0f0 #909090;*/
+  text-decoration: none;
+  color: #7799aa;
+  /*left: 1px;
+  top: 1px;*/
+}
+
+div.menu {
+  background-color: #ffffff;
+  border: 1px solid #7799aa;
+  left: 0px;
+  padding: 0px 0px 0px 0px;
+  position: absolute;
+  top: 0px;
+  visibility: hidden;
+  z-index: 101;
+}
+
+div.menu a.menuItem {
+  color: #000000;
+  cursor: pointer;
+  display: block;
+  padding: 3px 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size:12px;
+}
+
+div.menu a.menuItem:hover, div.menu a.menuItemHighlight {
+  background-color: #eeeeee;
+  color: #ffffff;
+}
+
+div.menu a.menuItem span.menuItemText {}
+
+div.menu a.menuItem span.menuItemArrow {
+  margin-right: -.75em;
+}
+
+div.menu div.menuItemSep {
+  border-top: 1px solid #909090;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 4px 2px;
+}

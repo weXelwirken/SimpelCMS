@@ -1,0 +1,232 @@
+/* Stylesheet SCMS */
+/* """"""""""""""" */
+
+/* ########################################################################## */
+/* Gundlegendes */
+body    {
+        background: #F5F5EF url('img/bg.gif') no-repeat center top;
+        margin:10px 10px 10px 10px;
+        }
+        
+#header {
+        background: #cbf400 url('img/fauna.jpg') no-repeat left top;
+        }
+/* Gundlegendes */
+/* ########################################################################## */
+
+/* ########################################################################## */
+/* Positionen */
+
+.naviPos    {
+            padding:5px 10px 10px 0px;
+            }
+
+/* BILDFORMATE
+-------------------------------------------------------------------*/
+
+img.left {
+        float: left;
+        margin: 2px 5px 0 0;
+        border:1px solid #999999;
+        }
+
+img.right {
+        float: right;
+        margin: 2px 0 0 5px;
+        border:1px solid #999999;
+        }
+
+/* Positionen */
+/* ########################################################################## */
+
+/* ########################################################################## */
+/* Texte */
+
+body, td, p, div	{
+		color: #666666;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		}
+
+h1		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 3px;
+		margin-bottom: 3px
+		}
+
+h2		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 18px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 2px;
+		margin-bottom: 2px
+		}
+
+h3		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 14px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 2px;
+		margin-bottom: 2px
+		}
+
+h4		{
+		color: #7799aa;
+		font-weight: bold;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		margin-top: 2px;
+		margin-bottom: 2px
+		}
+
+.textKurz	{
+		color: #666666;
+		font-size: 12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		font-weight:bold;
+		}
+		
+.textRot	{
+		color: #cc0000;
+		}
+		
+.textGruen	{
+		color: #009900;
+		}
+		
+.klein	{
+		font-size: 10px;
+		}
+
+.kleiner{
+		font-size: 9px;
+		}
+
+.gross  {
+		font-size: 15px;
+		}
+
+.groesser{
+		font-size: 18px;
+		}
+
+/* Texte */
+/* ########################################################################## */
+
+/* ########################################################################## */
+/* Links */
+		
+a	{
+		color: #7799aa;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		text-decoration: underline;
+		}
+		
+a:link	{
+		}
+
+a:visited {
+		}
+
+a:hover	{
+		text-decoration: none;
+		}
+		
+
+a.naviOrd	{
+		color: #666666;
+		font-weight: bold;
+		font-size:14px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		text-decoration: none;
+		}		
+	
+		
+a.naviOrd:link	{
+		}
+
+a.naviOrd:visited {
+		}
+
+a.naviOrd:hover	{
+		}
+		
+
+a.naviItem	{
+		color: #7799aa;
+		font-weight: bold;
+		font-size:12px;
+		font-family: Trebuchet MS, Verdana, Arial, Helvetica;
+		text-decoration: underline;
+		}
+		
+a.naviItem:link	{
+		}
+
+a.naviItem:visited {
+		}
+
+a.naviItem:hover	{
+		}
+
+
+/* Links */
+/* ########################################################################## */
+
+/* ########################################################################## */
+/* Formulare */
+
+.inputUserAuth	{
+		font-size:10px;
+		width:100px;
+		}
+
+.submitUserAuth	{
+        background-color:#7799aa;
+        color:#F5F5EF;
+        font-weight:bold;
+		font-size:9px;
+		width:60px;
+		-moz-border-radius:5px;
+		}
+
+.submit	{
+        background-color:#7799aa;
+        color:#F5F5EF;
+        font-weight:bold;
+		width:150px;
+		-moz-border-radius:5px;
+		}
+
+/* Formulare */
+/* ########################################################################## */
+
+/* ########################################################################## */
+/* Diverses */
+
+legend	{
+        padding:0px 5px 0px 5px;
+		color:#7799aa;
+		font-weight:bold;
+		}
+
+fieldset, table.aktionen	{
+        margin:5px 0px 5px 0px;
+        padding:5px;
+		border:1px solid #7799aa;
+		border-style:solid;
+		-moz-border-radius-topleft:10px;
+        -moz-border-radius-topright:10px;
+		}
+		
+.nobr   {
+        white-space:nowrap;
+        }
+
+/* Diverses */
+/* ########################################################################## */
