@@ -111,10 +111,10 @@ $lang_guestbook_formSubmit =      "Eintragen";
 $lang_guestbook_formTitle =       "Neuer Eintrag";
 $lang_guestbook_formText1 =       "Bitte f&uuml;llen Sie alle mit * gekennzeichneten Felder aus und dr&uuml;cken Sie 'Eintragen' am Ende das Formulars.";
 $lang_guestbook_formSubject =     "Betreff";
-$lang_guestbook_messageSubject =  "Neuer G�stebuch-Eintrag: ";
+$lang_guestbook_messageSubject =  "Neuer GŠstebuch-Eintrag: ";
 $lang_guestbook_messageText1 =    "Es gibt einen neuen Eintrag im G&auml;stebuch von ";
 $lang_guestbook_messageText2 =    "Der Eintrag lautet:";
-$lang_guestbook_messageMailname = "SCMS-G�stebuch";
+$lang_guestbook_messageMailname = "SCMS-GŠstebuch";
 $lang_guestbook_sendErrorTitle =  "Sendefehler!";
 $lang_guestbook_sendErrorText1 =  "Bei der Verarbeitung des Eingabeformulars kam es zu einem Sendefehler. Ihre G&auml;stebuch-Eintrag,";
 $lang_guestbook_sendErrorText2 =  ", wurde nicht gespeichert! Bitte versuche Sie es erneut oder schicken Sie uns einen Hinweis per eMail an";
@@ -128,5 +128,47 @@ $lang_guestbook_sendText4 =       "Zur&uuml;ck zum";
 $lang_guestbook_sendText5 =       "G&auml;stebuch";
 $lang_guestbook_text =            "<p>Gef&auml;llt Ihnen unser Angebot? Haben Sie Anregungen oder Hinweise f&uuml;r uns? Dann hinterlassen Sie einen Eintrag in unserem G&auml;stebuch.";
 $lang_guestbook_input =           "Eintrag hinzuf&uuml;gen &raquo;";
+
+
+
+
+$lang_newsletter_errorFirstname =  "Es wurde kein Vorname angegeben";
+$lang_newsletter_errorLastname =   "Es wurde kein Nachname angegeben";
+$lang_newsletter_errorMail =       "Es wurde keine korrekte eMail angegeben";
+$lang_newsletter_errorMailvorh =   "Diese E-Mail Adresse ist bereits f&uuml;r einen Newsletter registriert";
+$lang_newsletter_errorSalutation = "Es wurde keine Anrede ausgew&auml;hlt";
+$lang_newsletter_errorReCAPTCHA =  "Die Sicherheitsfrage wurde nicht korrekt beantwortet.";
+$lang_newsletter_errorTitle =      "Fehler!";
+$lang_newsletter_errorText1 =      "Ihre Angaben sind unvollst&auml;ndig. Das System meldet folgende Fehler:";
+$lang_newsletter_errorText2 =      "Zur&uuml;ck zur <a href=\"javascript:history.back()\">Eingabe</a>.";
+$lang_newsletter_formFirstname =   "Vorname";
+$lang_newsletter_formLastname =    "Nachname";
+$lang_newsletter_formMail =        "Ihre eMail";
+$lang_newsletter_formBestellen =   "Bestellen";
+$lang_newsletter_formAbbestellen = "Abbestellen";
+$lang_newsletter_formTitlebe =     "Newsletter bestellen";
+$lang_newsletter_formTitleabbe =   "Newsletter abbestellen";
+$lang_newsletter_formText1 =       "Bitte f&uuml;llen Sie alle mit * gekennzeichneten Felder aus und dr&uuml;cken Sie 'Senden' am Ende das Formulars. Sie erhalten dann eine Bestätigungsmail.";
+$lang_newsletter_formSalutation =  "Anrede";
+$lang_newsletter_formSalutation0 = "Bitte w&auml;hlen!";
+$lang_newsletter_formSalutationF = "Frau";
+$lang_newsletter_formSalutationM = "Herr";
+$lang_newsletter_messageTitle =    " - Newsletter Bestätigung";
+$lang_newsletter_messageAnrede =   "Hallo";
+$lang_newsletter_messageText1 =    "Vielen Dank für das Bestellen unseres Newsletters.";
+$lang_newsletter_messageText2 =    "Um den Newsletter zu erhalten müssen Sie nur auf den unten stehenden Link klicken.";
+$lang_newsletter_sendErrorTitle =  "Fehler!";
+$lang_newsletter_sendErrorText1 =  "Bei der Verarbeitung des Newsletters kam es zu einem Fehler.";
+$lang_newsletter_sendErrorMail =   "Fehler beim Senden der Mail";
+$lang_newsletter_sendErrorDB =     "Fehler beim Eintragen in die Datenbank";
+$lang_newsletter_abstmessageTitle =" - Newsletter Abbestellen";
+$lang_newsletter_abstmessageText1 ="Um den Newsletter abzubestellen klicken Sie auf den unteren Link.";
+$lang_newsletter_sendTitle =       "An Ihre E-Mail Adresse wurde eine Best&auml;tigunsmail verschickt,<br>um den Newsletter zu erhalten klicken Sie bitte auf den in ihr stehenden Link.";
+$lang_newsletter_sendTitle =       "An Ihre E-Mail Adreser wurde eine Best&auml;tigunsmail verschickt,<br>um den Newsletter nicht mehr zu erhalten klicken Sie bitte auf den in ihr stehenden Link.";
+$lang_newsletter_bestellt =        "Der Newsletter wurde erfolgreich Bestellt";
+$lang_newsletter_abbestellt =      "Der Newsletter wurde abbestellt";
+$lang_newsletter_valError =        "Es gab einen Fehler mit der Verarbeitung des Best&auml;tigungslinks";
+$lang_newsletter_sendText4 =       "Zur&uuml;ck zur <a href=\"index.php\" target=\"_top\">Startseite</a>.";
+$lang_newsletter_text =            "";
 
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2009-07-14 09:12:44
+<?php /* Smarty version 2.6.18, created on 2010-03-31 12:13:22
          compiled from scms.tpl */ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
           "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,6 +15,8 @@
 " type="text/javascript"></script>
 <script type="text/javascript" src="admin/jscripts/slimbox/js/mootools.js"></script>
 <script type="text/javascript" src="admin/jscripts/slimbox/js/slimbox.js"></script>
+<script type="text/javascript" src="inc/suchjs/jquery.js"></script>
+<script type="text/javascript" src="inc/suchjs/jquery.autocomplete.js"></script>
 <!-- /CSS & JS -->
 <!-- MetaTags -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

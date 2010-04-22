@@ -9,11 +9,19 @@ $mail = $_POST["mail"];
 $betreff = $_POST["betreff"];
 $nachricht = $_POST["nachricht"];
 $cc = $_POST["cc"];
+$cpt_wert = $_POST["cpt_wert"];
+
+//CPT Grafiken
+$_SESSION['cpt_namen'] = array("mac", "tux", "win");
 
 // ********************************************************************************************************************
 // Mail senden ********************************************************************************************************   
 if($senden=="1")
 	{
+	    	
+    //Warten
+	sleep(0.7);
+	
 	// Feldtest
 	$felherText = "";
 	if($anrede=="0"){$fehlerText.="<li>".$lang_contact_errorSalutation."\n";}
@@ -27,14 +35,17 @@ if($senden=="1")
 		else{$mailPunkt = explode(".", $mailAt[1]);if(count($mailPunkt)<"2"){$fehlerText.="<li>".$lang_contact_errorMail."\n";}}
 		}
 
-    // reCAPTCHA **********************************************
-    $privatekey = "6Le_QgUAAAAAAIRa-ih7Uj9Xog6iBBuJz-mVJ3ze";
-    $resp = recaptcha_check_answer ($privatekey,
-                                    $_SERVER["REMOTE_ADDR"],
-                                    $_POST["recaptcha_challenge_field"],
-                                    $_POST["recaptcha_response_field"]);
-
-    if(!$resp->is_valid){$fehlerText.="<li>".$lang_contact_errorReCAPTCHA."\n";}
+    // CAPTCHA **********************************************
+    
+    if($_POST['cpt_wert']!=$_SESSION['cpt_werte'][$_SESSION['cpt_zuf']]) {
+    	
+    	$fehlerText.="<li>".$lang_contact_errorReCAPTCHA."\n";
+    }
+    
+	//CPT loeschen 
+	unset($_SESSION['cpt_namen']);
+	unset($_SESSION['cpt_werte']);
+    	
 	
 	// Fehlermeldung
 	if($fehlerText!="")
@@ -60,14 +71,14 @@ if($senden=="1")
 		$to = $MailInfo;
 		// Debug: $to = "info@wexelwirken.de";
 		$subject = $betreff;
-		$message = $lang_contact_messageText1."<br>\r\n";
-		$message.= "<b>".$anrede." ".$vorname." ".$nachname." (".$mail.$orga.")</b><br>\r\n<br>\r\n";
-		$message.= $lang_contact_messageText2."<br>\r\n";
-		$message.= "<b>\"".nl2br($nachricht)."\"</b><br>\r\n";
+		$message = $lang_contact_messageText1."\r\n";
+		$message.= "".$anrede." ".$vorname." ".$nachname." (".$mail.$orga.")\r\n\r\n";
+		$message.= $lang_contact_messageText2."\r\n";
+		$message.= "".$nachricht."\r\n";
 		
 		/* "Content-type"-Header. */
 		$headers  = "MIME-Version: 1.0\r\n";
-		$headers .= "Content-type: text/html; charset=utf-8\r\n";
+		$headers .= "Content-type: text/plain; charset=utf-8\r\n";
 
 		/* zusaetzliche Header */
 		$headers .= "From: ".$vorname." ".$nachname." <".$mail.">\r\n";
@@ -176,19 +187,19 @@ else
         <tr><td colspan=\"2\" align=\"center\">\n";
     
     // ****************************************************************************************
-    // reCAPTCHA ******************************************************************************
-    
+    // CAPTCHA ******************************************************************************
+    	
+
+	
+	//CPT Zufallswert fuer Frage ausknobeln
+	$_SESSION['cpt_zuf'] = rand(0, count($_SESSION['cpt_namen'])-1);
+	
+	
     // Look & Feel
-    $inhalt.= "<script type=\"text/javascript\">
-        var RecaptchaOptions = {
-        audio_beta_12_08 : true,
-        theme: 'red',
-        lang: '".strtolower($_SESSION["Lang"])."'
-        };
-        </script>\n";
-    
-    $publickey = "6Le_QgUAAAAAAJM70peauN48hi-Hf-LVIWefkObW";
-    $inhalt.= recaptcha_get_html($publickey);
+	$inhalt.= '<img src="inc/cpt.php" alt="CPTCHA">	<br>
+	Wie viele '.$_SESSION["cpt_namen"][$_SESSION["cpt_zuf"]].' - Symbole sind vorhanden? <br>
+	
+	<input type="text" name="cpt_wert" maxlength="2" >';
     
     
     $inhalt.= "</td></tr>
@@ -204,9 +215,9 @@ else
         <tr><td colspan=\"2\"><img src=\"img/one.gif\" width=\"1\" height=\"10\" border=\"0\" alt=\"\"></td></tr>
         
         </table>
-        
-        
+       
         </form>
         
         </fieldset>";
 	}
+?>

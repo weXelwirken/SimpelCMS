@@ -1,54 +1,92 @@
 <?php
-/*
-Settings-Datei vom SimpelCMS
-""""""""""""""""""""""""""""
-Version: SimpelCMS v08/15.0015git (Stand 28.02.2010)
-*/
+// Settings-Datei vom SimpelCMS
+// """"""""""""""""""""""""""""
 
-//*************************************************************
-// Grundlegendes
+// Version: SimpelCMS v08/15.0015 (Stand 02.01.2010)
 
-// Einstellungen
-$SiteUrl =              "http://localhost:8888";    // URL der Website
-$RelativePath =         "/scms";                    // Pfad relativ zum DocumentRoot bzw. HttpRoot
-$MainCss =              "scms.css";                 // Dateiname der Haupt-CSS-Datei
-$ScmsTpl =              "scms.tpl";                 // Name des verwendeten Smarty-Templates
+// echo "<!-- Settings einbinden -->\n";
 
-// Features
-$ScmsAuth =             true;                       // Nutzer-Authentifizierung im Frontend
-$ScmsLang =             true;                       // Multilingualität
-$ScmsVerweise =         true;                       // Verweise
+// Server Wurzel
+$ServerRootPath = "/SimpelCMS_raf";
+$ServerRoot = $_SERVER['DOCUMENT_ROOT'].$ServerRootPath;
+// echo "<!-- " . $ServerRoot . " -->\n";
 
+// HTTP Wurzel
+$HttpRoot = "http://raffi_on_tour/SimpelCMS_raf";
+// echo "<!-- " . $HttpRoot . " -->\n";
 
-//*************************************************************
-// Variablen aufladen
+// Klassen einbinden
+include($ServerRoot . "/admin/php/klassen/klassen.php");
+//echo "<!-- Klassen einbinden -->\n";
 
-$ServerRoot =           $_SERVER['DOCUMENT_ROOT'].$ServerRootPath;      // Server Wurzel
-$HttpRoot =             $SiteUrl.$ServerRootPath;                       // HTTP Wurzel
-$ImgPfad =              $HttpRoot."/img";                               // IMG-Pfad
-$ImgPfadAdmin =         $HttpRoot."/admin/img";                         // IMG-Admin-Pfad
-$OneGif =               $ImgPfad."/one.gif";                            // OneGif-Pfad
-$PdfPfad =              $HttpRoot . "/pdf";                             // PDF-Pfad
-$PmaPfad =              "http://confixx.wexelwirken.de/phpMyAdmin/";    // PMA-Pfad
-$CssPfad =              $HttpRoot."/".$MainCss;                         // CSS-Pfad
-$CssPfadJs =            "../scms.css";                                  // CSS-Pfad TinyMCE
-$CssPfadAdmin =         $HttpRoot . "/admin/admin.css";                 // CSS-Pfad Admin
-$JsPfad =               $HttpRoot . "/scms.js";                         // JS-Pfad
-$SlimboxSrc =           "/admin/jscripts/slimbox";                      // SlimboxSrc
-$InterfaceLang =        "DE";                                           // Standard-Sprache
+// Funktionen einbinden
+include($ServerRoot . "/admin/php/funktionen/funktionen.php");
+//echo "<!-- Funktionen einbinden -->\n";
 
+// Smarty einbinden
+require($ServerRoot . "/admin/php/smarty/MySmarty.class.php");
+// echo "<!-- Smarty einbinden -->\n";
 
-//*************************************************************
-// Dateien einbinden
+// Verbindungsdaten einbinden
+include($ServerRoot . "/admin/config/verbindungsdaten.php");
+//echo "<!-- Verbindungsdaten einbinden -->\n";
 
-include($ServerRoot . "/admin/php/klassen/klassen.php");                // Klassen einbinden
-include($ServerRoot . "/admin/php/funktionen/funktionen.php");          // Funktionen einbinden
-require($ServerRoot . "/admin/php/smarty/MySmarty.class.php");          // Smarty einbinden
-include($ServerRoot . "/admin/config/verbindungsdaten.php");            // Verbindungsdaten einbinden
-include($ServerRoot . "/admin/config/userSettings.php");                // User-Settings einbinden
-include($ServerRoot . "/admin/config/module.php");                      // Module einbinden
-include($ServerRoot . "/admin/lang/".$InterfaceLang.".php");            // InterfaceLang einbinden
+// User-Settings einbinden
+include($ServerRoot . "/admin/config/userSettings.php");
+//echo "<!-- User-Settings einbinden -->\n";
 
+// Module einbinden
+include($ServerRoot . "/admin/config/module.php");
+//echo "<!-- Module einbinden -->\n";
+
+include($ServerRoot . "/admin/php/funktionen/shop_funktionen.php");
+//echo "<!-- Module einbinden -->\n";
+
+// IMG-Pfad
+$ImgPfad = $HttpRoot . "/img";
+$ImgPfadAdmin = $HttpRoot . "/admin/img";
+$OneGif = $ImgPfad . "/one.gif";
+//echo "<!-- " . $ImgPfad . " -->\n";
+
+// PDF-Pfad
+$PdfPfad = $HttpRoot . "/pdf";
+
+// PMA-Pfad
+$PmaPfad = "http://confixx.wexelwirken.de/phpMyAdmin/";
+//echo "<!-- " . $PmaPfad . " -->\n";
+
+// CSS-Pfad
+$CssPfad = $HttpRoot . "/scms.css";
+$CssPfadJs = "../scms.css";
+$CssPfadAdmin = $HttpRoot . "/admin/admin.css";
+//echo "<!-- " . $CssPfad . " -->\n";
+
+// JS-Pfad
+$JsPfad = $HttpRoot . "/scms.js";
+//echo "<!-- " . $JsPfad . " -->\n";"scms.tpl"
+
+// ScmsTpl
+$ScmsTpl = "scms.tpl";
+//echo "<!-- " . $ScmsTpl . " -->\n";
+
+// ScmsAuth
+$ScmsAuth = true;
+//echo "<!-- " . $ScmsAuth . " -->\n";
+
+// ScmsLang
+$ScmsLang = true;
+$InterfaceLang = "DE";
+include($ServerRoot . "/admin/lang/".$InterfaceLang.".php");
+//echo "<!-- " . $ScmsLang . " -->\n";
+//echo "<!-- " . $InterfaceLang . " -->\n";
+
+// ScmsVerweise
+$ScmsVerweise = true;
+//echo "<!-- " . $ScmsVerweise . " -->\n";
+
+// SlimboxSrc
+$SlimboxSrc = "/admin/jscripts/slimbox";
+//echo "<!-- " . $SlimboxSrc . " -->\n";
 
 
 //*************************************************************
@@ -179,5 +217,25 @@ $modusArrayADMIN = array(
 	
 // Admin- und Modul-Array zusammenfuegen
 if($modusArrayMODULE){$modusArrayADMIN = array_merge($modusArrayADMIN, $modusArrayMODULE);}
+
+// Shop Settings ***********************************************
+// Version 0002 (Stand 09.03.2009)
+
+// Variablen
+$ShopOrd =      "45";
+$ShopId =       "64";
+$ShopNaviShow = true;
+$MiniKorbShow = true;
+$MaxiKorbShow = false;
+
+// ShopBildPfad
+$ShopBildPfad = "/data/shop";
+
+// Bestellstatus
+$bestellstatus = array(
+    "1" => "eingegangen|#cc0000",
+    "2" => "in Bearbeitung|#ff9933",
+    "3" => "versendet|#009900",
+    "4" => "abgeschlossen|#999999");
 
 ?>

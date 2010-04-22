@@ -234,7 +234,7 @@ function KlappNaviDok($ordner)
 			if($ModRewrite){$link=LinkRewrite($zeile["ID"]);}
 			else{$link="index.php?id=".$zeile["ID"]."&amp;ord=".$ordner;}
 			
-			$out.= "<b>&bull;</b>&nbsp;<a href=\"".$link."\" class=\"naviItem\">".stripslashes($zeile["Linktext"])."</a><br>\n";
+			$out.= "<b style='margin-left: 5px;'>&bull;</b>&nbsp;<a href=\"".$link."\" class=\"naviItem\">".stripslashes($zeile["Linktext"])."</a><br>\n";
 			}
 		}
 	else{$out = "Fehler: Es konnte kein Ergebnis fuer die Funktion KlappNaviDok ausgelesen werden!<br>\n";}
@@ -285,11 +285,21 @@ function KlappNaviBaum($mutter, $mutterAlt, $check, $ordPfadArray)
 			$mutterAlt = $mutter;
 			// Display laden
 			if(in_array($zeile["ID"],$ordPfadArray)){$display="blockXXXXX";}else{$display="none";}
-			$out.= "<div class=\"naviPos\"><a href=\"index.php?id=".$dokId["ID"]."&amp;ord=".$zeile["ID"]."\" class=\"naviOrd\">".stripslashes($zeile["Name"])."</a><br>\n";
-			$out.= "<span style=\"display:".$display.";\">\n";
-			$out.= KlappNaviDok($zeile["ID"]);
-			$out.= KlappNaviBaum($zeile["ID"], $mutterAlt,$check, $ordPfadArray);
-			$out.= "</span>\n</div>\n";
+			if($mutterAlt == "0"){
+				$out.= "<div class=\"naviPos\"><a href=\"index.php?id=".$dokId["ID"]."&amp;ord=".$zeile["ID"]."\" class=\"naviOrd\">".stripslashes($zeile["Name"])."</a><br>\n";
+				$out.= "<span style=\"display:".$display.";\">\n";
+				$out.= KlappNaviDok($zeile["ID"]);
+				$out.= KlappNaviBaum($zeile["ID"], $mutterAlt, $check, $ordPfadArray);
+				$out.= "</span>\n</div>\n";
+			}
+			else
+			{
+				$out.= "<div class=\"naviPos\" style='margin-left:5px;'><b>&bull;</b>&nbsp;<a href=\"index.php?id=".$dokId["ID"]."&amp;ord=".$zeile["ID"]."\" class=\"naviOrd\" style='color:#999999'>".stripslashes($zeile["Name"])."</a><br>\n";
+				$out.= "<span style=\"display:".$display.";\">\n";
+				$out.= KlappNaviDok($zeile["ID"]);
+				$out.= KlappNaviBaum($zeile["ID"], $mutterAlt, $check, $ordPfadArray);
+				$out.= "</span>\n</div>\n";
+			}
 			}
 		}
 	else{echo "Fehler: Es konnte kein Ergebnis fuer die Funktion KlappNaviBaum ausgelesen werden!<br>\n";}

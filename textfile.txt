@@ -1,0 +1,3 @@
+lat			lon			title	description	icon						iconSize	iconOffset
+51.7191696166992	8.75784158706665	Test1	Test1		Ol_icon_blue_example.png	24,24		0,-24
+51.7191696166992	8.75784158706665	<font color="black"><b>Titel</b>  <br>erste Zeile <br>zweite Zeile <br><br><img src="/img/scmsIcons_scms.ico" width="43" height="34"></p></font>	Ol_icon_red_example.png	16,16	-8,-8

@@ -9,6 +9,8 @@
 <script src="{$js}" type="text/javascript"></script>
 <script type="text/javascript" src="admin/jscripts/slimbox/js/mootools.js"></script>
 <script type="text/javascript" src="admin/jscripts/slimbox/js/slimbox.js"></script>
+<script type="text/javascript" src="inc/suchjs/jquery.js"></script>
+<script type="text/javascript" src="inc/suchjs/jquery.autocomplete.js"></script>
 <!-- /CSS & JS -->
 <!-- MetaTags -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
